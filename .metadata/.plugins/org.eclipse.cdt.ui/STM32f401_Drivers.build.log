@@ -1,0 +1,11 @@
+01:05:32 **** Incremental Build of configuration Debug for project STM32f401_Drivers ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "STM32f401_Drivers.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5883	    164	    412	   6459	   193b	STM32f401_Drivers.elf
+Finished building: STM32f401_Drivers.siz
+ 
+
+01:05:32 Build Finished. 0 errors, 0 warnings. (took 618ms)
+

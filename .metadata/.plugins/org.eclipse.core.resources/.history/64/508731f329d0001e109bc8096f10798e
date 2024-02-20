@@ -1,0 +1,31 @@
+/*
+ * RCC.h
+ *
+ *  Created on: Feb 7, 2024
+ *      Author: Nada
+ */
+
+#ifndef MCAL_RCC_H_
+#define MCAL_RCC_H_
+
+#include "../../LIB/Std_Types.h"
+
+/* APIs */
+u8 RCC_SelectSysClk (RCC_Clock_t Clock);
+u8 RCC_GetSysClk (void);
+u8 RCC_EnableClk (RCC_Clock_t Clock);
+u8 RCC_DisableClk (RCC_Clock_t Clock);
+u8 RCC_CheckClkStatus (RCC_Clock_t Clock, RCC_Status_t *ClockStatus);
+u8 RCC_SetPLLSource (RCC_Clock_t Clock);
+u8 RCC_GetPLLSource (void);
+u8 RCC_ConfigPLL (u32 M, u32 N, u32 P, u32 Q);
+u8 RCC_EnableAHB1Peri(AHB1ENR_Peri_t AHB1_Peri);
+u8 RCC_EnableAHB2Peri(AHB2ENR_Peri_t AHB2_Peri);
+u8 RCC_EnableAPB1Peri(APB1ENR_Peri_t APB1_Peri);
+u8 RCC_EnableAPB2Peri(APB2ENR_Peri_t APB2_Peri);
+u8 RCC_DisableAHB1Peri(AHB1ENR_Peri_t AHB1_Peri);
+u8 RCC_DisableAHB2Peri(AHB2ENR_Peri_t AHB2_Peri);
+u8 RCC_DisableAPB1Peri(APB1ENR_Peri_t APB1_Peri);
+u8 RCC_DisableAPB2Peri(APB2ENR_Peri_t APB2_Peri);
+
+#endif /* MCAL_RCC_H_ */

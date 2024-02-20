@@ -1,0 +1,26 @@
+
+//#include <stdio.h>
+//#include <stdlib.h>
+#include "MCAL/RCC/RCC.h"
+#include "MCAL/GPIO/GPIO.h"
+int main(void)
+{
+
+
+	RCC_EnableAHB1Peri(AHB1ENR_GPIOAEN);
+
+	GPIO_PinConfig_t PinA0;
+	PinA0.Port = GPIO_A;
+	PinA0.Pin = GPIO_Pin0;
+	PinA0.Configuration = GPO_PP;
+	PinA0.Speed = GPIO_HIGH_SPEED;
+
+	GPIO_InitPinConfig(&PinA0);
+
+	//RCC_Clock_OFF(RCC_HSE_RC)
+
+	while (1)
+	{
+
+	}
+}

@@ -1,0 +1,39 @@
+/*
+ * GPIO.h
+ *
+ *  Created on: Feb 18, 2024
+ *      Author: Nada
+ */
+
+#ifndef MCAL_GPIO_GPIO_H_
+#define MCAL_GPIO_GPIO_H_
+
+#include "../../LIB/Std_Types.h"
+
+/* Base Addresses*/
+
+#define GPIO_A			(void*)0x40020000
+#define GPIO_B			(void*)0x40020400
+#define GPIO_C			(void*)0x40020800
+#define GPIO_D			(void*)0x40020C00
+#define GPIO_E			(void*)0x40021000
+#define GPIO_H			(void*)0x40021C00
+
+/* Configuration Options */
+
+/* Struct for pin configuration info */
+typedef struct
+{
+    void* Port;
+    u32   Pin;
+    u32   Mode;
+    u32   Speed;
+}GPIO_PinConfig_t;
+
+u8 GPIO_InitPinConfig(void);
+
+u8 GPIO_SetPinStatus();
+
+u8 GPIO_GetPinStatus();
+
+#endif /* MCAL_GPIO_GPIO_H_ */

@@ -1,0 +1,7 @@
+1708461788749	Delete resource 'Trial/src/LIB'
+1708461982071	Delete resource 'Trial/src/MCAL/GPIO'
+1708462533828	Rename resource 'Trial'
+1708463661627	Delete resource 'STM32f401_Drivers/src/MCAL/RCC'
+1708466753185	Delete resource 'STM32f401_Drivers/src/HAL/LED.C'
+1708466933684	Delete resource 'STM32f401_Drivers/src/APP/GPIO_Testttt.c'
+1708466955207	Delete resource 'STM32f401_Drivers/src/APP/RCC_Testtt.c'

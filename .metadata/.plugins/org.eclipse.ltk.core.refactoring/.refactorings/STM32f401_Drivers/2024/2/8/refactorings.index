@@ -1,0 +1,7 @@
+1708461716496	Move 'RCC.h' to 'MCAL'
+1708461719158	Move 'GPIO.h' to 'MCAL'
+1708465931809	Rename resource 'RCC_Test'
+1708465943432	Rename resource 'RCC_Test.h'
+1708465983450	Rename resource 'main.c'
+1708466782617	Rename resource 'RCC_Test.c'
+1708466803794	Rename resource 'GPIO_Test.c'

@@ -1,0 +1,52 @@
+/*
+ * GPIO.c
+ *
+ *  Created on: Feb 18, 2024
+ *      Author: Nada
+ */
+
+#ifndef MCAL_GPIO_GPIO_C_
+#define MCAL_GPIO_GPIO_C_
+
+#include "GPIO.h"
+
+u8 GPIO_InitPinConfig(GPIO_PinConfig_t *PinCfgr)
+{
+	u8 ErrorStatus = Ok;
+
+	u32 Local_CopyReg = 0;
+
+	if(PinCfgr->Port == NULL)
+		ErrorStatus = NullPointer;
+
+	if ((PinCfgr->Pin < GPIO_Pin0)||(PinCfgr->Pin > GPIO_Pin15))
+		ErrorStatus = WrongChoice;
+
+	if (ErrorStatus==Ok)
+	{
+		Local_CopyReg = ((GPIO_Regs_t*)(PinCfgr->Port))->GPIO_MODER;
+		Local_CopyReg &= ~(MASK_TWO_BITS<<((PinCfgr->Pin)*TWO_BITS));
+		Local_CopyReg |= (((PinCfgr->Configuration)&MASK_TWO_BITS)<<((PinCfgr->Pin)*TWO_BITS));
+		((GPIO_Regs_t*)(PinCfgr->Port))->GPIO_MODER = Local_CopyReg;
+
+		Local_CopyReg = ((GPIO_Regs_t*)(PinCfgr->Port))->GPIO_OTYPER;
+		Local_CopyReg &= ~(MASK_ONE_BIT<<(PinCfgr->Pin));
+		Local_CopyReg |= ((((PinCfgr->Configuration)>>SHIFT_FOR_OTYPE)&MASK_ONE_BIT)<<(PinCfgr->Pin));
+		((GPIO_Regs_t*)(PinCfgr->Port))->GPIO_OTYPER = Local_CopyReg;
+
+		Local_CopyReg = ((GPIO_Regs_t*)(PinCfgr->Port))->GPIO_PUPDR;
+		Local_CopyReg &= ~(MASK_TWO_BITS<<((PinCfgr->Pin)*TWO_BITS));
+		Local_CopyReg |= ((((PinCfgr->Configuration)>>SHIFT_FOR_PUPDR)&MASK_TWO_BITS)<<((PinCfgr->Pin)*TWO_BITS));
+		((GPIO_Regs_t*)(PinCfgr->Port))->GPIO_PUPDR = Local_CopyReg;
+
+	}
+
+
+
+
+
+
+	return ErrorStatus;
+}
+
+#endif /* MCAL_GPIO_GPIO_C_ */

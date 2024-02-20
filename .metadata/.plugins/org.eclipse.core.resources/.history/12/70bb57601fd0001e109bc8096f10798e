@@ -1,0 +1,17 @@
+
+//#include <stdio.h>
+//#include <stdlib.h>
+#include "MCAL/RCC/RCC.h"
+
+int main(void)
+{
+
+	RCC_Clock_ON(RCC_HSE_CRYSTAL);
+
+	//RCC_Clock_OFF(RCC_HSE_RC)
+
+	while (1)
+	{
+
+	}
+}

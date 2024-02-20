@@ -1,0 +1,19 @@
+/*
+ * GPIO.h
+ *
+ *  Created on: Feb 18, 2024
+ *      Author: Nada
+ */
+
+#ifndef MCAL_GPIO_GPIO_H_
+#define MCAL_GPIO_GPIO_H_
+
+#include "../../LIB/Std_Types.h"
+
+u8 GPIO_InitPinConfig(void);
+
+u8 GPIO_SetPinStatus();
+
+u8 GPIO_GetPinStatus();
+
+#endif /* MCAL_GPIO_GPIO_H_ */

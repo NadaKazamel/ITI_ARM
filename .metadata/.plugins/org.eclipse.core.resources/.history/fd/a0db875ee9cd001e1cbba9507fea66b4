@@ -1,0 +1,17 @@
+
+//#include <stdio.h>
+//#include <stdlib.h>
+#include "MCAL/RCC/RCC.h"
+
+int main(void)
+{
+
+	RCC_EnableClk(Clock_HSE);
+
+	RCC_DisableClk(Clock_HSI);
+
+	while (1)
+	{
+
+	}
+}

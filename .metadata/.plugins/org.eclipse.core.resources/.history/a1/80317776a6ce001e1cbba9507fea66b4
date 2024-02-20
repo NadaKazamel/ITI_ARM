@@ -1,0 +1,15 @@
+/*
+ * GPIO.h
+ *
+ *  Created on: Feb 18, 2024
+ *      Author: Nada
+ */
+
+#ifndef MCAL_GPIO_GPIO_H_
+#define MCAL_GPIO_GPIO_H_
+
+#include "../../LIB/Std_Types.h"
+
+u8
+
+#endif /* MCAL_GPIO_GPIO_H_ */
