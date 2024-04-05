@@ -159,11 +159,6 @@ typedef struct
 #define RCC_APB2ENR_TIM10EN		0x00020000
 #define RCC_APB2ENR_TIM11EN		0x00040000
 
-/* Error Possibilities */
-#define Ok			0
-#define NotOk		1
-#define WrongChoice	2
-
 /* On or Off */
 #define OFF			0
 #define ON			1
@@ -797,4 +792,3 @@ u8 RCC_DisableAPB2Peri(APB2ENR_Peri_t APB2_Peri)
 
 	return ErrorStatus;
 }
-

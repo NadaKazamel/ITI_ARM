@@ -5,10 +5,10 @@
  *      Author: Nada
  */
 
-#ifndef MCAL_GPIO_GPIO_H_
-#define MCAL_GPIO_GPIO_H_
+#ifndef MCAL_GPIO_H_
+#define MCAL_GPIO_H_
 
-#include "Std_Types.h"
+#include "std_types.h"
 
 /* Port options */
 #define GPIO_A			(void*)0x40020000
@@ -83,10 +83,10 @@ typedef struct
 
 
 /* Error Possibilities */
-#define NotOk		0
-#define Ok			1
-#define NullPointer	2
-#define WrongChoice	3
+#define Ok				0
+#define NotOk			1
+#define NullPointer		2
+#define WrongChoice		3
 
 /* APIs */
 
@@ -96,4 +96,4 @@ u8 GPIO_SetPinStatus(void* Port, GPIO_Pins_t Pin, u8 Status);
 
 u8 GPIO_GetPinStatus(void* Port, GPIO_Pins_t Pin, u8 * Status);
 
-#endif /* MCAL_GPIO_GPIO_H_ */
+#endif /* MCAL_GPIO_H_ */

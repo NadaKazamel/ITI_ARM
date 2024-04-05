@@ -8,7 +8,7 @@
 #ifndef MCAL_RCC_H_
 #define MCAL_RCC_H_
 
-#include "Std_Types.h"
+#include "std_types.h"
 
 /* Clock Options */
 typedef enum
@@ -78,6 +78,12 @@ typedef enum
 	APB2ENR_TIM11EN
 }APB2ENR_Peri_t;
 
+
+/* Error Possibilities */
+#define Ok			    0
+#define NotOk		    1
+#define NullPointer		2
+#define WrongChoice     3
 
 /* APIs */
 
